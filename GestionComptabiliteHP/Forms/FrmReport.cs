@@ -91,7 +91,7 @@ namespace GestionComptabiliteHP.Forms
 
                 using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())
                 {
-                    cmd.CommandText = "sp_journal_operation";
+                    cmd.CommandText = "sp_bilan_operations";
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add(Parametres.Instance.AjouterParametre(cmd, "@date_debut", 30, DbType.DateTime, begin));
@@ -100,11 +100,11 @@ namespace GestionComptabiliteHP.Forms
                     adapter = new SqlDataAdapter((SqlCommand)cmd);
                     dataset = new DataSet();
 
-                    adapter.Fill(dataset, "DataSetJournal");
+                    adapter.Fill(dataset, "DataSetBilan");
 
                     RptViewer.LocalReport.DataSources.Clear();
-                    RptViewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetJournal", dataset.Tables[0]));
-                    RptViewer.LocalReport.ReportEmbeddedResource = "GestionComptabiliteHP.Reports.RptJournal.rdlc";
+                    RptViewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetBilan", dataset.Tables[0]));
+                    RptViewer.LocalReport.ReportEmbeddedResource = "GestionComptabiliteHP.Reports.RptBilan.rdlc";
                     RptViewer.RefreshReport();
                 }
             }
@@ -144,7 +144,9 @@ namespace GestionComptabiliteHP.Forms
 
         private void BtnPrintBilan_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             LoadReportBilan(DtDebut.Value, DtFin.Value);
+            Cursor.Current = Cursors.Default;
         }
     }
 }

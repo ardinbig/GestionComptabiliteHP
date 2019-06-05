@@ -43,7 +43,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>id</Value>
+                              <Value>N°</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -90,7 +90,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>libelle</Value>
+                              <Value>Libelle opération</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -126,7 +126,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -138,7 +137,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>compte d</Value>
+                              <Value>Débit</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -185,7 +184,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>montant d</Value>
+                              <Value>Montant</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -232,7 +231,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>type d</Value>
+                              <Value>Type</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -279,7 +278,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>compte c</Value>
+                              <Value>Crédit</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -326,7 +325,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>montant c</Value>
+                              <Value>Montant</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -373,7 +372,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>type c</Value>
+                              <Value>Type</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -724,7 +723,7 @@
         <Top>0.20276in</Top>
         <Left>0.24175in</Left>
         <Height>0.5in</Height>
-        <Width>8.48958in</Width>
+        <Width>8.48956in</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -788,41 +787,6 @@
       <Height>1.28125in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="date_operation2">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Fields!date_operation.Value</Value>
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                    <FontSize>11pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>date_operation</rd:DefaultName>
-          <Top>0.17583in</Top>
-          <Left>7.36459in</Left>
-          <Height>0.25in</Height>
-          <Width>1.46875in</Width>
-          <Style>
-            <Border>
-              <Color>#e5e5e5</Color>
-              <Style>Solid</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

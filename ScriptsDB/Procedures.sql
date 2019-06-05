@@ -167,3 +167,13 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_bilan_operations
+(
+	@date_debut DATETIME,
+	@date_fin DATETIME
+)
+AS
+BEGIN
+	SELECT * from v_list_operations, v_montant_comptes WHERE date_operation BETWEEN @date_debut AND @date_fin;
+END
+GO

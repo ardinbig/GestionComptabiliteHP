@@ -61,5 +61,8 @@ SELECT id, date_operation, libelle, d.vrai_compte as compte_d, d.montant as mont
 	c.type_operation as type_c FROM tOperation as opt
 INNER JOIN v_list_operation_credit as c ON opt.id = c.idOpt
 INNER JOIN v_list_operation_debit as d ON opt.id = d.idOpt
+GO
 
-select * from v_list_operations
+CREATE VIEW v_montant_comptes as
+SELECT SUM(montant_d) as debit , SUM(montant_c) as credit FROM v_list_operations
+GO

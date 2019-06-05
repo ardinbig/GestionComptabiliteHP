@@ -35,14 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DtDebut = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnPrintBilan = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PnelHeaderCompte = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.BtnPrintBilan = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.PnelHeaderCompte.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +55,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.groupBox2.Controls.Add(this.BtnPrintBilan);
             this.groupBox2.Controls.Add(this.BtnPrintJournal);
             this.groupBox2.Controls.Add(this.DtFin);
             this.groupBox2.Controls.Add(this.label2);
@@ -64,7 +63,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 73);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(510, 90);
+            this.groupBox2.Size = new System.Drawing.Size(748, 90);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Journal des opérations comptables";
@@ -121,18 +120,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Date début : ";
             // 
-            // BtnPrintBilan
-            // 
-            this.BtnPrintBilan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnPrintBilan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrintBilan.Location = new System.Drawing.Point(27, 19);
-            this.BtnPrintBilan.Name = "BtnPrintBilan";
-            this.BtnPrintBilan.Size = new System.Drawing.Size(95, 30);
-            this.BtnPrintBilan.TabIndex = 16;
-            this.BtnPrintBilan.Text = "Bilan";
-            this.BtnPrintBilan.UseVisualStyleBackColor = true;
-            this.BtnPrintBilan.Click += new System.EventHandler(this.BtnPrintBilan_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -145,17 +132,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.groupBox3.Controls.Add(this.BtnPrintBilan);
-            this.groupBox3.Location = new System.Drawing.Point(545, 79);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 84);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // PnelHeaderCompte
             // 
@@ -179,6 +155,20 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Rapport";
             // 
+            // BtnPrintBilan
+            // 
+            this.BtnPrintBilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
+            this.BtnPrintBilan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPrintBilan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrintBilan.ForeColor = System.Drawing.Color.White;
+            this.BtnPrintBilan.Location = new System.Drawing.Point(512, 20);
+            this.BtnPrintBilan.Name = "BtnPrintBilan";
+            this.BtnPrintBilan.Size = new System.Drawing.Size(138, 50);
+            this.BtnPrintBilan.TabIndex = 16;
+            this.BtnPrintBilan.Text = "Bilan";
+            this.BtnPrintBilan.UseVisualStyleBackColor = false;
+            this.BtnPrintBilan.Click += new System.EventHandler(this.BtnPrintBilan_Click);
+            // 
             // FrmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,7 +176,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(775, 445);
             this.Controls.Add(this.PnelHeaderCompte);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -197,7 +186,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.PnelHeaderCompte.ResumeLayout(false);
             this.PnelHeaderCompte.PerformLayout();
             this.ResumeLayout(false);
@@ -213,10 +201,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DtDebut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnPrintBilan;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel PnelHeaderCompte;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BtnPrintBilan;
     }
 }

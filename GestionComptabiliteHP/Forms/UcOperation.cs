@@ -72,7 +72,8 @@ namespace GestionComptabiliteHP.Forms
                         !string.IsNullOrEmpty(CmbCmpt2.Text) &&
                         !string.IsNullOrEmpty(CmbType1.Text) &&
                         !string.IsNullOrEmpty(CmbType2.Text) &&
-                        !string.IsNullOrEmpty(TxtIdOperation.Text))
+                        !string.IsNullOrEmpty(TxtIdOperation.Text) &&
+                        CmbType1.Text != CmbType2.Text)
             {
                 return true;
             }
@@ -149,6 +150,7 @@ namespace GestionComptabiliteHP.Forms
                         opt.Type2 = CmbType2.Text;
 
                         opt.Save(opt);
+                        ClearFields();
                     }                   
                 }
                 else if (save == false && modify == true)
@@ -166,6 +168,7 @@ namespace GestionComptabiliteHP.Forms
                         opt.Type2 = CmbType2.Text;
 
                         opt.Update(opt);
+                        ClearFields();
                     }
                 }
                 else if (save == false && modify == false)
@@ -183,11 +186,12 @@ namespace GestionComptabiliteHP.Forms
                         opt.Type2 = CmbType2.Text;
 
                         opt.Delete(opt.Id);
+                        ClearFields();
                     }
                 }
 
                 LoadGridControle();
-                ClearFields();
+                
             }
             catch (InvalidOperationException ex)
             {
@@ -287,20 +291,27 @@ namespace GestionComptabiliteHP.Forms
             switch (((Control)sender).Name)
             {
                 case "CmbType1":
-                    //if (CmbType1.SelectedValue.Equals(TypeOperation.Débit))
-                    //{
-                    //    CmbType2.SelectedItem = TypeOperation.Débit;
-                    //}
-                    //else if (CmbType1.SelectedText == "Crédie")
-                    //{
-                    //    CmbType2.SelectedText = "Débit";
-                    //}
+                    if (CmbType1.Text.Equals("Débit"))
+                    {
+                        CmbType2.SelectedText = "Crédit";
+                    }
+                    else if (CmbType1.Text.Equals("Crédit"))
+                    {
+                        CmbType2.SelectedText = "Débit";
+                    }
 
                     break;
 
                 case "CmbType2":
-                    
-                    break;
+                    //if (CmbType2.Text.Equals(TypeOperation.Débit))
+                    //{
+                    //    CmbType1.SelectedItem = TypeOperation.Crédit;
+                    //}
+                    //else if (CmbType2.Text.Equals(TypeOperation.Crédit))
+                    //{
+                    //    CmbType1.SelectedItem = TypeOperation.Débit;
+                    //}
+                    //break;
 
                 default:
                     break;

@@ -416,6 +416,7 @@
             // RbComptant
             // 
             this.RbComptant.AutoSize = true;
+            this.RbComptant.Enabled = false;
             this.RbComptant.Location = new System.Drawing.Point(247, 110);
             this.RbComptant.Name = "RbComptant";
             this.RbComptant.Size = new System.Drawing.Size(85, 17);
@@ -427,6 +428,7 @@
             // 
             this.RbCaisse.AutoSize = true;
             this.RbCaisse.Checked = true;
+            this.RbCaisse.Enabled = false;
             this.RbCaisse.Location = new System.Drawing.Point(134, 110);
             this.RbCaisse.Name = "RbCaisse";
             this.RbCaisse.Size = new System.Drawing.Size(74, 17);
@@ -447,6 +449,7 @@
             // RbBanque
             // 
             this.RbBanque.AutoSize = true;
+            this.RbBanque.Enabled = false;
             this.RbBanque.Location = new System.Drawing.Point(18, 110);
             this.RbBanque.Name = "RbBanque";
             this.RbBanque.Size = new System.Drawing.Size(80, 17);

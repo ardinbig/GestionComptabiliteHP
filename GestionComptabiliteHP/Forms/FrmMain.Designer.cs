@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.PnlMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PnlApropos = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.PnlBlanc = new System.Windows.Forms.Panel();
+            this.PnlParametre = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.PnlAccueil = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PnlAccueilColor = new System.Windows.Forms.Panel();
             this.PnlRapport = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.PnlRapportColor = new System.Windows.Forms.Panel();
@@ -44,28 +55,18 @@
             this.PnlConnection = new System.Windows.Forms.Panel();
             this.LblConnection = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.PnlAccueil = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.PnlAccueilColor = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PnlApropos = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.PnlParametre = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.PnlApropos.SuspendLayout();
             this.PnlBlanc.SuspendLayout();
+            this.PnlParametre.SuspendLayout();
+            this.PnlAccueil.SuspendLayout();
             this.PnlRapport.SuspendLayout();
             this.PnlOperation.SuspendLayout();
             this.PnlCompte.SuspendLayout();
             this.PnlHeader.SuspendLayout();
             this.PnlConnection.SuspendLayout();
-            this.PnlAccueil.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.PnlApropos.SuspendLayout();
-            this.PnlParametre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlMenu
@@ -83,6 +84,50 @@
             this.PnlMenu.Size = new System.Drawing.Size(164, 471);
             this.PnlMenu.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GestionComptabiliteHP.Properties.Resources.IMG_20190523_WA0002;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
+            this.panel1.Controls.Add(this.PnlApropos);
+            this.panel1.Location = new System.Drawing.Point(0, 432);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(164, 39);
+            this.panel1.TabIndex = 4;
+            // 
+            // PnlApropos
+            // 
+            this.PnlApropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+            this.PnlApropos.Controls.Add(this.label7);
+            this.PnlApropos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PnlApropos.Location = new System.Drawing.Point(0, 2);
+            this.PnlApropos.Name = "PnlApropos";
+            this.PnlApropos.Size = new System.Drawing.Size(164, 37);
+            this.PnlApropos.TabIndex = 2;
+            this.PnlApropos.Click += new System.EventHandler(this.MenuApropos_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(48, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "A propos";
+            this.label7.Click += new System.EventHandler(this.MenuApropos_Click);
+            // 
             // PnlBlanc
             // 
             this.PnlBlanc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
@@ -95,6 +140,74 @@
             this.PnlBlanc.Name = "PnlBlanc";
             this.PnlBlanc.Size = new System.Drawing.Size(164, 183);
             this.PnlBlanc.TabIndex = 3;
+            // 
+            // PnlParametre
+            // 
+            this.PnlParametre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+            this.PnlParametre.Controls.Add(this.label6);
+            this.PnlParametre.Controls.Add(this.panel3);
+            this.PnlParametre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PnlParametre.Enabled = false;
+            this.PnlParametre.Location = new System.Drawing.Point(0, 146);
+            this.PnlParametre.Name = "PnlParametre";
+            this.PnlParametre.Size = new System.Drawing.Size(164, 35);
+            this.PnlParametre.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(43, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Paramètre";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 41);
+            this.panel3.TabIndex = 0;
+            // 
+            // PnlAccueil
+            // 
+            this.PnlAccueil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+            this.PnlAccueil.Controls.Add(this.label5);
+            this.PnlAccueil.Controls.Add(this.PnlAccueilColor);
+            this.PnlAccueil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PnlAccueil.Location = new System.Drawing.Point(0, 2);
+            this.PnlAccueil.Name = "PnlAccueil";
+            this.PnlAccueil.Size = new System.Drawing.Size(164, 35);
+            this.PnlAccueil.TabIndex = 3;
+            this.PnlAccueil.Click += new System.EventHandler(this.MenuAccueil_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(52, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Accueil";
+            this.label5.Click += new System.EventHandler(this.MenuAccueil_Click);
+            // 
+            // PnlAccueilColor
+            // 
+            this.PnlAccueilColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(115)))));
+            this.PnlAccueilColor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PnlAccueilColor.Location = new System.Drawing.Point(0, 0);
+            this.PnlAccueilColor.Name = "PnlAccueilColor";
+            this.PnlAccueilColor.Size = new System.Drawing.Size(8, 41);
+            this.PnlAccueilColor.TabIndex = 0;
+            this.PnlAccueilColor.Click += new System.EventHandler(this.MenuAccueil_Click);
             // 
             // PnlRapport
             // 
@@ -258,115 +371,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Hôpital Provincial Nord-Kivu | Free";
             // 
-            // PnlAccueil
-            // 
-            this.PnlAccueil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
-            this.PnlAccueil.Controls.Add(this.label5);
-            this.PnlAccueil.Controls.Add(this.PnlAccueilColor);
-            this.PnlAccueil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PnlAccueil.Location = new System.Drawing.Point(0, 2);
-            this.PnlAccueil.Name = "PnlAccueil";
-            this.PnlAccueil.Size = new System.Drawing.Size(164, 35);
-            this.PnlAccueil.TabIndex = 3;
-            this.PnlAccueil.Click += new System.EventHandler(this.MenuAccueil_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(52, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Accueil";
-            this.label5.Click += new System.EventHandler(this.MenuAccueil_Click);
-            // 
-            // PnlAccueilColor
-            // 
-            this.PnlAccueilColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(115)))));
-            this.PnlAccueilColor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PnlAccueilColor.Location = new System.Drawing.Point(0, 0);
-            this.PnlAccueilColor.Name = "PnlAccueilColor";
-            this.PnlAccueilColor.Size = new System.Drawing.Size(8, 41);
-            this.PnlAccueilColor.TabIndex = 0;
-            this.PnlAccueilColor.Click += new System.EventHandler(this.MenuAccueil_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
-            this.panel1.Controls.Add(this.PnlApropos);
-            this.panel1.Location = new System.Drawing.Point(0, 432);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(164, 39);
-            this.panel1.TabIndex = 4;
-            // 
-            // PnlApropos
-            // 
-            this.PnlApropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
-            this.PnlApropos.Controls.Add(this.label7);
-            this.PnlApropos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PnlApropos.Location = new System.Drawing.Point(0, 2);
-            this.PnlApropos.Name = "PnlApropos";
-            this.PnlApropos.Size = new System.Drawing.Size(164, 37);
-            this.PnlApropos.TabIndex = 2;
-            this.PnlApropos.Click += new System.EventHandler(this.MenuApropos_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(48, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 16);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "A propos";
-            this.label7.Click += new System.EventHandler(this.MenuApropos_Click);
-            // 
-            // PnlParametre
-            // 
-            this.PnlParametre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
-            this.PnlParametre.Controls.Add(this.label6);
-            this.PnlParametre.Controls.Add(this.panel3);
-            this.PnlParametre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PnlParametre.Enabled = false;
-            this.PnlParametre.Location = new System.Drawing.Point(0, 146);
-            this.PnlParametre.Name = "PnlParametre";
-            this.PnlParametre.Size = new System.Drawing.Size(164, 35);
-            this.PnlParametre.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(43, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Paramètre";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(8, 41);
-            this.panel3.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,6 +379,7 @@
             this.Controls.Add(this.PnlHeader);
             this.Controls.Add(this.PnlMain);
             this.Controls.Add(this.PnlMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(950, 550);
             this.Name = "FrmMain";
@@ -382,7 +387,15 @@
             this.Text = "CountHospy";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.PnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.PnlApropos.ResumeLayout(false);
+            this.PnlApropos.PerformLayout();
             this.PnlBlanc.ResumeLayout(false);
+            this.PnlParametre.ResumeLayout(false);
+            this.PnlParametre.PerformLayout();
+            this.PnlAccueil.ResumeLayout(false);
+            this.PnlAccueil.PerformLayout();
             this.PnlRapport.ResumeLayout(false);
             this.PnlRapport.PerformLayout();
             this.PnlOperation.ResumeLayout(false);
@@ -393,14 +406,6 @@
             this.PnlHeader.PerformLayout();
             this.PnlConnection.ResumeLayout(false);
             this.PnlConnection.PerformLayout();
-            this.PnlAccueil.ResumeLayout(false);
-            this.PnlAccueil.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.PnlApropos.ResumeLayout(false);
-            this.PnlApropos.PerformLayout();
-            this.PnlParametre.ResumeLayout(false);
-            this.PnlParametre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
