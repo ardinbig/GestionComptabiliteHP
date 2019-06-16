@@ -70,6 +70,14 @@ namespace GestionComptabiliteHP
                         if (ImplementConnection.Instance.Conn.State == System.Data.ConnectionState.Open)
                             ImplementConnection.Instance.Conn.Close();
 
+                        PnlAccueilColor.BackColor = Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(155)))));
+                        PnlCompteColor.BackColor = Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+                        PnlOperationColor.BackColor = Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+                        PnlRapportColor.BackColor = Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
+
+                        uc = new UcAccueil();
+                        LoadUserControles(uc);
+
                         LblConnection.Text = "Connexion";
                         PnlBlanc.Enabled = false;
                     }

@@ -66,6 +66,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtIdOperation = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PnelHeaderOperation.SuspendLayout();
             this.PnlMainOperation.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvOperation)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnelHeaderOperation
@@ -99,9 +101,11 @@
             // 
             // PnlMainOperation
             // 
+            this.PnlMainOperation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlMainOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.PnlMainOperation.Controls.Add(this.groupBox1);
-            this.PnlMainOperation.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnlMainOperation.Location = new System.Drawing.Point(0, 45);
             this.PnlMainOperation.Name = "PnlMainOperation";
             this.PnlMainOperation.Size = new System.Drawing.Size(768, 425);
@@ -109,26 +113,27 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Controls.Add(this.BtnEditOperation);
             this.groupBox1.Controls.Add(this.BtnDeleteOperation);
             this.groupBox1.Controls.Add(this.BtnSaveOperation);
             this.groupBox1.Controls.Add(this.BtnNewOperation);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(11, 1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(748, 415);
+            this.groupBox1.Size = new System.Drawing.Size(768, 425);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // BtnEditOperation
             // 
+            this.BtnEditOperation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEditOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(204)))), ((int)(((byte)(62)))));
             this.BtnEditOperation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEditOperation.Enabled = false;
             this.BtnEditOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditOperation.Location = new System.Drawing.Point(390, 173);
+            this.BtnEditOperation.Location = new System.Drawing.Point(389, 181);
             this.BtnEditOperation.Name = "BtnEditOperation";
             this.BtnEditOperation.Size = new System.Drawing.Size(95, 30);
             this.BtnEditOperation.TabIndex = 10;
@@ -138,11 +143,12 @@
             // 
             // BtnDeleteOperation
             // 
+            this.BtnDeleteOperation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnDeleteOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.BtnDeleteOperation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDeleteOperation.Enabled = false;
             this.BtnDeleteOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteOperation.Location = new System.Drawing.Point(502, 173);
+            this.BtnDeleteOperation.Location = new System.Drawing.Point(498, 181);
             this.BtnDeleteOperation.Name = "BtnDeleteOperation";
             this.BtnDeleteOperation.Size = new System.Drawing.Size(95, 30);
             this.BtnDeleteOperation.TabIndex = 9;
@@ -152,11 +158,12 @@
             // 
             // BtnSaveOperation
             // 
+            this.BtnSaveOperation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnSaveOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
             this.BtnSaveOperation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSaveOperation.Enabled = false;
             this.BtnSaveOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSaveOperation.Location = new System.Drawing.Point(273, 173);
+            this.BtnSaveOperation.Location = new System.Drawing.Point(281, 181);
             this.BtnSaveOperation.Name = "BtnSaveOperation";
             this.BtnSaveOperation.Size = new System.Drawing.Size(95, 30);
             this.BtnSaveOperation.TabIndex = 8;
@@ -166,10 +173,11 @@
             // 
             // BtnNewOperation
             // 
+            this.BtnNewOperation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnNewOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(115)))));
             this.BtnNewOperation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNewOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNewOperation.Location = new System.Drawing.Point(163, 173);
+            this.BtnNewOperation.Location = new System.Drawing.Point(171, 181);
             this.BtnNewOperation.Name = "BtnNewOperation";
             this.BtnNewOperation.Size = new System.Drawing.Size(95, 30);
             this.BtnNewOperation.TabIndex = 7;
@@ -179,11 +187,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.DgvOperation);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox4.Location = new System.Drawing.Point(3, 215);
+            this.groupBox4.Location = new System.Drawing.Point(7, 221);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(742, 197);
+            this.groupBox4.Size = new System.Drawing.Size(754, 195);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Liste de catégories de classe";
@@ -212,7 +222,7 @@
             this.DgvOperation.Name = "DgvOperation";
             this.DgvOperation.ReadOnly = true;
             this.DgvOperation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvOperation.Size = new System.Drawing.Size(736, 178);
+            this.DgvOperation.Size = new System.Drawing.Size(748, 176);
             this.DgvOperation.TabIndex = 0;
             this.DgvOperation.Click += new System.EventHandler(this.DgvOperation_Click);
             // 
@@ -299,9 +309,10 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(369, 15);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(384, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(371, 146);
+            this.groupBox3.Size = new System.Drawing.Size(375, 146);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mouvement";
@@ -312,7 +323,7 @@
             this.CmbType2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbType2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.CmbType2.FormattingEnabled = true;
-            this.CmbType2.Location = new System.Drawing.Point(294, 90);
+            this.CmbType2.Location = new System.Drawing.Point(109, 90);
             this.CmbType2.Name = "CmbType2";
             this.CmbType2.Size = new System.Drawing.Size(61, 24);
             this.CmbType2.TabIndex = 15;
@@ -324,7 +335,7 @@
             this.CmbType1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbType1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.CmbType1.FormattingEnabled = true;
-            this.CmbType1.Location = new System.Drawing.Point(294, 55);
+            this.CmbType1.Location = new System.Drawing.Point(109, 54);
             this.CmbType1.Name = "CmbType1";
             this.CmbType1.Size = new System.Drawing.Size(61, 24);
             this.CmbType1.TabIndex = 14;
@@ -332,33 +343,39 @@
             // 
             // CmbCmpt2
             // 
+            this.CmbCmpt2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbCmpt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbCmpt2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCmpt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.CmbCmpt2.FormattingEnabled = true;
-            this.CmbCmpt2.Location = new System.Drawing.Point(113, 90);
+            this.CmbCmpt2.Location = new System.Drawing.Point(178, 90);
             this.CmbCmpt2.Name = "CmbCmpt2";
-            this.CmbCmpt2.Size = new System.Drawing.Size(169, 24);
+            this.CmbCmpt2.Size = new System.Drawing.Size(173, 24);
             this.CmbCmpt2.TabIndex = 13;
             this.CmbCmpt2.SelectedIndexChanged += new System.EventHandler(this.CmbOperation_SelectedIndexChanged);
             // 
             // CmbCmpt1
             // 
+            this.CmbCmpt1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbCmpt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbCmpt1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCmpt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.CmbCmpt1.FormattingEnabled = true;
-            this.CmbCmpt1.Location = new System.Drawing.Point(113, 54);
+            this.CmbCmpt1.Location = new System.Drawing.Point(178, 54);
             this.CmbCmpt1.Name = "CmbCmpt1";
-            this.CmbCmpt1.Size = new System.Drawing.Size(169, 24);
+            this.CmbCmpt1.Size = new System.Drawing.Size(173, 24);
             this.CmbCmpt1.TabIndex = 12;
             this.CmbCmpt1.SelectedIndexChanged += new System.EventHandler(this.CmbOperation_SelectedIndexChanged);
             // 
             // TxtMontant
             // 
+            this.TxtMontant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtMontant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMontant.Location = new System.Drawing.Point(113, 20);
+            this.TxtMontant.Location = new System.Drawing.Point(109, 20);
             this.TxtMontant.Mask = "000000000";
             this.TxtMontant.Name = "TxtMontant";
             this.TxtMontant.Size = new System.Drawing.Size(242, 22);
@@ -406,18 +423,20 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.TxtIdOperation);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 15);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(349, 146);
+            this.groupBox2.Size = new System.Drawing.Size(375, 146);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opération";
             // 
             // RbComptant
             // 
+            this.RbComptant.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbComptant.AutoSize = true;
             this.RbComptant.Enabled = false;
-            this.RbComptant.Location = new System.Drawing.Point(247, 110);
+            this.RbComptant.Location = new System.Drawing.Point(260, 110);
             this.RbComptant.Name = "RbComptant";
             this.RbComptant.Size = new System.Drawing.Size(85, 17);
             this.RbComptant.TabIndex = 16;
@@ -426,10 +445,11 @@
             // 
             // RbCaisse
             // 
+            this.RbCaisse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbCaisse.AutoSize = true;
             this.RbCaisse.Checked = true;
             this.RbCaisse.Enabled = false;
-            this.RbCaisse.Location = new System.Drawing.Point(134, 110);
+            this.RbCaisse.Location = new System.Drawing.Point(147, 110);
             this.RbCaisse.Name = "RbCaisse";
             this.RbCaisse.Size = new System.Drawing.Size(74, 17);
             this.RbCaisse.TabIndex = 15;
@@ -439,6 +459,8 @@
             // 
             // DtDateOperation
             // 
+            this.DtDateOperation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DtDateOperation.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.DtDateOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.DtDateOperation.Location = new System.Drawing.Point(115, 47);
@@ -448,9 +470,10 @@
             // 
             // RbBanque
             // 
+            this.RbBanque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RbBanque.AutoSize = true;
             this.RbBanque.Enabled = false;
-            this.RbBanque.Location = new System.Drawing.Point(18, 110);
+            this.RbBanque.Location = new System.Drawing.Point(31, 110);
             this.RbBanque.Name = "RbBanque";
             this.RbBanque.Size = new System.Drawing.Size(80, 17);
             this.RbBanque.TabIndex = 14;
@@ -459,6 +482,8 @@
             // 
             // TxtLibelleOperation
             // 
+            this.TxtLibelleOperation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtLibelleOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtLibelleOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLibelleOperation.Location = new System.Drawing.Point(115, 74);
@@ -488,6 +513,8 @@
             // 
             // TxtIdOperation
             // 
+            this.TxtIdOperation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtIdOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtIdOperation.Enabled = false;
             this.TxtIdOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -506,12 +533,27 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Code : ";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(762, 152);
+            this.tableLayoutPanel1.TabIndex = 11;
+            // 
             // UcOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PnlMainOperation);
             this.Controls.Add(this.PnelHeaderOperation);
+            this.Controls.Add(this.PnlMainOperation);
             this.MinimumSize = new System.Drawing.Size(768, 470);
             this.Name = "UcOperation";
             this.Size = new System.Drawing.Size(768, 470);
@@ -526,6 +568,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -570,5 +613,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DgvColTypeC;
         private System.Windows.Forms.DataGridViewTextBoxColumn DgvColMontantC;
         private System.Windows.Forms.Button BtnEditOperation;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

@@ -99,6 +99,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.panel1.Controls.Add(this.PnlApropos);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 432);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 39);
@@ -109,6 +110,7 @@
             this.PnlApropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
             this.PnlApropos.Controls.Add(this.label7);
             this.PnlApropos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PnlApropos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnlApropos.Location = new System.Drawing.Point(0, 2);
             this.PnlApropos.Name = "PnlApropos";
             this.PnlApropos.Size = new System.Drawing.Size(164, 37);
@@ -319,6 +321,7 @@
             this.PnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.PnlMain.Location = new System.Drawing.Point(164, 40);
             this.PnlMain.MinimumSize = new System.Drawing.Size(770, 471);
             this.PnlMain.Name = "PnlMain";
@@ -338,6 +341,8 @@
             // 
             // PnlConnection
             // 
+            this.PnlConnection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlConnection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.PnlConnection.Controls.Add(this.LblConnection);
             this.PnlConnection.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -380,7 +385,6 @@
             this.Controls.Add(this.PnlMain);
             this.Controls.Add(this.PnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(950, 550);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

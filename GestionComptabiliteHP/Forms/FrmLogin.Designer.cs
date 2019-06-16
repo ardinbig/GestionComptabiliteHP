@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnConnection = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -42,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CmbTypeDB = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 42);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(148, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Authentification";
             // 
             // BtnCancel
             // 
@@ -133,6 +145,7 @@
             this.TxtPwd.PasswordChar = '•';
             this.TxtPwd.Size = new System.Drawing.Size(198, 22);
             this.TxtPwd.TabIndex = 15;
+            this.TxtPwd.Text = "jesus christ";
             // 
             // label4
             // 
@@ -152,6 +165,7 @@
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(198, 22);
             this.TxtUser.TabIndex = 14;
+            this.TxtUser.Text = "Ardin";
             // 
             // label3
             // 
@@ -171,6 +185,7 @@
             this.TxtServer.Name = "TxtServer";
             this.TxtServer.Size = new System.Drawing.Size(198, 22);
             this.TxtServer.TabIndex = 11;
+            this.TxtServer.Text = "ARDINBIG-PC";
             // 
             // label2
             // 
@@ -203,18 +218,6 @@
             this.label6.Size = new System.Drawing.Size(158, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Type Base de Données :";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(148, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Authentification";
             // 
             // FrmLogin
             // 

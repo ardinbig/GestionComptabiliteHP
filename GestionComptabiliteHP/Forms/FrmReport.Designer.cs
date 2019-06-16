@@ -30,6 +30,7 @@
         {
             this.RptViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnPrintBilan = new System.Windows.Forms.Button();
             this.BtnPrintJournal = new System.Windows.Forms.Button();
             this.DtFin = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PnelHeaderCompte = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.BtnPrintBilan = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.PnelHeaderCompte.SuspendLayout();
@@ -67,6 +67,20 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Journal des opérations comptables";
+            // 
+            // BtnPrintBilan
+            // 
+            this.BtnPrintBilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
+            this.BtnPrintBilan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPrintBilan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrintBilan.ForeColor = System.Drawing.Color.White;
+            this.BtnPrintBilan.Location = new System.Drawing.Point(512, 20);
+            this.BtnPrintBilan.Name = "BtnPrintBilan";
+            this.BtnPrintBilan.Size = new System.Drawing.Size(138, 50);
+            this.BtnPrintBilan.TabIndex = 16;
+            this.BtnPrintBilan.Text = "Bilan";
+            this.BtnPrintBilan.UseVisualStyleBackColor = false;
+            this.BtnPrintBilan.Click += new System.EventHandler(this.BtnPrintBilan_Click);
             // 
             // BtnPrintJournal
             // 
@@ -131,7 +145,7 @@
             this.groupBox1.Size = new System.Drawing.Size(751, 258);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Preveiw";
             // 
             // PnelHeaderCompte
             // 
@@ -149,30 +163,17 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
-            this.label5.Location = new System.Drawing.Point(313, 9);
+            this.label5.Location = new System.Drawing.Point(332, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 24);
             this.label5.TabIndex = 0;
             this.label5.Text = "Rapport";
             // 
-            // BtnPrintBilan
-            // 
-            this.BtnPrintBilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
-            this.BtnPrintBilan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnPrintBilan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrintBilan.ForeColor = System.Drawing.Color.White;
-            this.BtnPrintBilan.Location = new System.Drawing.Point(512, 20);
-            this.BtnPrintBilan.Name = "BtnPrintBilan";
-            this.BtnPrintBilan.Size = new System.Drawing.Size(138, 50);
-            this.BtnPrintBilan.TabIndex = 16;
-            this.BtnPrintBilan.Text = "Bilan";
-            this.BtnPrintBilan.UseVisualStyleBackColor = false;
-            this.BtnPrintBilan.Click += new System.EventHandler(this.BtnPrintBilan_Click);
-            // 
             // FrmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.ClientSize = new System.Drawing.Size(775, 445);
             this.Controls.Add(this.PnelHeaderCompte);

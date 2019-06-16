@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxDescription.Text" xml:space="preserve">
+    <value>Description : Count Hospy est un logiciel de gestion de comptabilité dans un hôpital
+Cas de Hôpital Provincial Nord-Kivu.
+
+Concepteur : 
+ALIKA BIGANIRO ARDIN
+ASIMWE DHEDJA ISAAC
+BARUKA DAN SIMWERAYI
+BASHIZI WANI JOSEPH
+BIGURWA BUHENDWA DOM'S
+BIHAMBA KAMBALE ROBERT
+BIN MAZUNGU OMAR DAVID</value>
+  </data>
 </root>

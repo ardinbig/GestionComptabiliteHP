@@ -51,7 +51,6 @@ namespace GestionComptabiliteHP_Lib.Classes
                 adapter.Fill(dt);
 
                 return dt;
-
             }            
         }
 
@@ -73,6 +72,7 @@ namespace GestionComptabiliteHP_Lib.Classes
                 }
 
                 dr.Dispose();
+                dr.Close();
             }
 
             return list;
@@ -86,6 +86,12 @@ namespace GestionComptabiliteHP_Lib.Classes
 
             using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())
             {
+                if (field.Contains("'"))
+                {
+                    int index = field.IndexOf("'");
+                    field = field.Insert(index + 1, "'");
+                }
+
                 cmd.CommandText = "SELECT id FROM " + table + " WHERE designation = '" + field + "'";
 
                 IDataReader dr = cmd.ExecuteReader();
@@ -96,6 +102,7 @@ namespace GestionComptabiliteHP_Lib.Classes
                 }
 
                 dr.Dispose();
+                dr.Close();
             }
 
             return id;
@@ -119,6 +126,7 @@ namespace GestionComptabiliteHP_Lib.Classes
                 }
 
                 dr.Dispose();
+                dr.Close();
             }
 
             return id;

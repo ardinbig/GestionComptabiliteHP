@@ -30,6 +30,20 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.TabPgClasse = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.DgvCategClasse = new System.Windows.Forms.DataGridView();
+            this.DgvColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvColDesign = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnDeleteCategClasse = new System.Windows.Forms.Button();
+            this.BtnSaveCategClasse = new System.Windows.Forms.Button();
+            this.BtnNewCategClasse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtDesignCategClasse = new System.Windows.Forms.TextBox();
+            this.TxtIdCategClasse = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.DgvClasse = new System.Windows.Forms.DataGridView();
@@ -49,19 +63,6 @@
             this.TxtDesignClasse = new System.Windows.Forms.TextBox();
             this.TxtIdClasse = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.DgvCategClasse = new System.Windows.Forms.DataGridView();
-            this.DgvColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvColDesign = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnDeleteCategClasse = new System.Windows.Forms.Button();
-            this.BtnSaveCategClasse = new System.Windows.Forms.Button();
-            this.BtnNewCategClasse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtDesignCategClasse = new System.Windows.Forms.TextBox();
-            this.TxtIdCategClasse = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.TabPgComptes = new System.Windows.Forms.TabPage();
             this.TabControlCompte = new System.Windows.Forms.TabControl();
             this.TabPgCompte = new System.Windows.Forms.TabPage();
@@ -131,14 +132,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.TabPgClasse.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClasse)).BeginInit();
-            this.groupBox6.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategClasse)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClasse)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.TabPgComptes.SuspendLayout();
             this.TabControlCompte.SuspendLayout();
             this.TabPgCompte.SuspendLayout();
@@ -181,8 +183,7 @@
             // 
             this.TabPgClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.TabPgClasse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TabPgClasse.Controls.Add(this.groupBox4);
-            this.TabPgClasse.Controls.Add(this.groupBox1);
+            this.TabPgClasse.Controls.Add(this.tableLayoutPanel1);
             this.TabPgClasse.Location = new System.Drawing.Point(4, 22);
             this.TabPgClasse.Name = "TabPgClasse";
             this.TabPgClasse.Padding = new System.Windows.Forms.Padding(3);
@@ -190,250 +191,43 @@
             this.TabPgClasse.TabIndex = 0;
             this.TabPgClasse.Text = "Classes";
             // 
-            // groupBox4
+            // tableLayoutPanel1
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Location = new System.Drawing.Point(385, 6);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(369, 380);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Classe";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox5.Controls.Add(this.DgvClasse);
-            this.groupBox5.Location = new System.Drawing.Point(3, 207);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(363, 170);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Liste de classes";
-            // 
-            // DgvClasse
-            // 
-            this.DgvClasse.AllowUserToAddRows = false;
-            this.DgvClasse.AllowUserToDeleteRows = false;
-            this.DgvClasse.AllowUserToOrderColumns = true;
-            this.DgvClasse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvClasse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DgvClasse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.DgvClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvClasse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.DgvColCategClasse,
-            this.DgvColNumClasse});
-            this.DgvClasse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvClasse.Location = new System.Drawing.Point(3, 16);
-            this.DgvClasse.Name = "DgvClasse";
-            this.DgvClasse.ReadOnly = true;
-            this.DgvClasse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvClasse.Size = new System.Drawing.Size(357, 151);
-            this.DgvClasse.TabIndex = 1;
-            this.DgvClasse.Click += new System.EventHandler(this.DgvClasse_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "designation";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Désignation";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // DgvColCategClasse
-            // 
-            this.DgvColCategClasse.DataPropertyName = "categorie";
-            this.DgvColCategClasse.HeaderText = "Catégorie";
-            this.DgvColCategClasse.Name = "DgvColCategClasse";
-            this.DgvColCategClasse.ReadOnly = true;
-            // 
-            // DgvColNumClasse
-            // 
-            this.DgvColNumClasse.DataPropertyName = "numero";
-            this.DgvColNumClasse.HeaderText = "Numéro";
-            this.DgvColNumClasse.Name = "DgvColNumClasse";
-            this.DgvColNumClasse.ReadOnly = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.groupBox6.Controls.Add(this.TxtNumClasse);
-            this.groupBox6.Controls.Add(this.CmbCategClasse);
-            this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Controls.Add(this.label6);
-            this.groupBox6.Controls.Add(this.BtnDeleteClasse);
-            this.groupBox6.Controls.Add(this.BtnSaveClasse);
-            this.groupBox6.Controls.Add(this.BtnNewClasse);
-            this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Controls.Add(this.TxtDesignClasse);
-            this.groupBox6.Controls.Add(this.TxtIdClasse);
-            this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Location = new System.Drawing.Point(11, 19);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(348, 181);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            // 
-            // TxtNumClasse
-            // 
-            this.TxtNumClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.TxtNumClasse.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TxtNumClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNumClasse.Location = new System.Drawing.Point(114, 69);
-            this.TxtNumClasse.Mask = "00000";
-            this.TxtNumClasse.Name = "TxtNumClasse";
-            this.TxtNumClasse.Size = new System.Drawing.Size(217, 22);
-            this.TxtNumClasse.TabIndex = 7;
-            this.TxtNumClasse.ValidatingType = typeof(int);
-            // 
-            // CmbCategClasse
-            // 
-            this.CmbCategClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.CmbCategClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbCategClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.CmbCategClasse.FormattingEnabled = true;
-            this.CmbCategClasse.Location = new System.Drawing.Point(114, 95);
-            this.CmbCategClasse.Name = "CmbCategClasse";
-            this.CmbCategClasse.Size = new System.Drawing.Size(217, 24);
-            this.CmbCategClasse.TabIndex = 10;
-            this.CmbCategClasse.SelectedIndexChanged += new System.EventHandler(this.CmbCategClasse_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 98);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Catégorie : ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 16);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Numéro : ";
-            // 
-            // BtnDeleteClasse
-            // 
-            this.BtnDeleteClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
-            this.BtnDeleteClasse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDeleteClasse.Enabled = false;
-            this.BtnDeleteClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteClasse.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteClasse.Location = new System.Drawing.Point(236, 135);
-            this.BtnDeleteClasse.Name = "BtnDeleteClasse";
-            this.BtnDeleteClasse.Size = new System.Drawing.Size(95, 30);
-            this.BtnDeleteClasse.TabIndex = 6;
-            this.BtnDeleteClasse.Text = "Supprimer";
-            this.BtnDeleteClasse.UseVisualStyleBackColor = false;
-            this.BtnDeleteClasse.Click += new System.EventHandler(this.ControleClasse_Click);
-            // 
-            // BtnSaveClasse
-            // 
-            this.BtnSaveClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
-            this.BtnSaveClasse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSaveClasse.Enabled = false;
-            this.BtnSaveClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSaveClasse.ForeColor = System.Drawing.Color.White;
-            this.BtnSaveClasse.Location = new System.Drawing.Point(128, 135);
-            this.BtnSaveClasse.Name = "BtnSaveClasse";
-            this.BtnSaveClasse.Size = new System.Drawing.Size(95, 30);
-            this.BtnSaveClasse.TabIndex = 5;
-            this.BtnSaveClasse.Text = "Enregistrer";
-            this.BtnSaveClasse.UseVisualStyleBackColor = false;
-            this.BtnSaveClasse.Click += new System.EventHandler(this.ControleClasse_Click);
-            // 
-            // BtnNewClasse
-            // 
-            this.BtnNewClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(115)))));
-            this.BtnNewClasse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNewClasse.ForeColor = System.Drawing.Color.White;
-            this.BtnNewClasse.Location = new System.Drawing.Point(18, 135);
-            this.BtnNewClasse.Name = "BtnNewClasse";
-            this.BtnNewClasse.Size = new System.Drawing.Size(95, 30);
-            this.BtnNewClasse.TabIndex = 4;
-            this.BtnNewClasse.Text = "Nouveau";
-            this.BtnNewClasse.UseVisualStyleBackColor = false;
-            this.BtnNewClasse.Click += new System.EventHandler(this.ControleClasse_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Code : ";
-            // 
-            // TxtDesignClasse
-            // 
-            this.TxtDesignClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.TxtDesignClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDesignClasse.Location = new System.Drawing.Point(114, 43);
-            this.TxtDesignClasse.Name = "TxtDesignClasse";
-            this.TxtDesignClasse.Size = new System.Drawing.Size(217, 22);
-            this.TxtDesignClasse.TabIndex = 3;
-            // 
-            // TxtIdClasse
-            // 
-            this.TxtIdClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.TxtIdClasse.Enabled = false;
-            this.TxtIdClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIdClasse.Location = new System.Drawing.Point(114, 17);
-            this.TxtIdClasse.Name = "TxtIdClasse";
-            this.TxtIdClasse.Size = new System.Drawing.Size(217, 22);
-            this.TxtIdClasse.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Désignation : ";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(754, 386);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(369, 380);
+            this.groupBox1.Size = new System.Drawing.Size(371, 380);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Catégorie Classe";
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.DgvCategClasse);
             this.groupBox3.Location = new System.Drawing.Point(3, 207);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(363, 170);
+            this.groupBox3.Size = new System.Drawing.Size(364, 163);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Liste de catégories de classe";
@@ -455,7 +249,7 @@
             this.DgvCategClasse.Name = "DgvCategClasse";
             this.DgvCategClasse.ReadOnly = true;
             this.DgvCategClasse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCategClasse.Size = new System.Drawing.Size(357, 151);
+            this.DgvCategClasse.Size = new System.Drawing.Size(358, 144);
             this.DgvCategClasse.TabIndex = 0;
             this.DgvCategClasse.Click += new System.EventHandler(this.DgvCategClasse_Click);
             // 
@@ -545,6 +339,8 @@
             // 
             // TxtDesignCategClasse
             // 
+            this.TxtDesignCategClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDesignCategClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtDesignCategClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDesignCategClasse.Location = new System.Drawing.Point(114, 72);
@@ -554,6 +350,8 @@
             // 
             // TxtIdCategClasse
             // 
+            this.TxtIdCategClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtIdCategClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtIdCategClasse.Enabled = false;
             this.TxtIdCategClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -572,6 +370,238 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Désignation : ";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.AutoSize = true;
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(380, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(371, 380);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Classe";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.DgvClasse);
+            this.groupBox5.Location = new System.Drawing.Point(3, 207);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(364, 163);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Liste de classes";
+            // 
+            // DgvClasse
+            // 
+            this.DgvClasse.AllowUserToAddRows = false;
+            this.DgvClasse.AllowUserToDeleteRows = false;
+            this.DgvClasse.AllowUserToOrderColumns = true;
+            this.DgvClasse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvClasse.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgvClasse.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DgvClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvClasse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.DgvColCategClasse,
+            this.DgvColNumClasse});
+            this.DgvClasse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvClasse.Location = new System.Drawing.Point(3, 16);
+            this.DgvClasse.Name = "DgvClasse";
+            this.DgvClasse.ReadOnly = true;
+            this.DgvClasse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvClasse.Size = new System.Drawing.Size(358, 144);
+            this.DgvClasse.TabIndex = 1;
+            this.DgvClasse.Click += new System.EventHandler(this.DgvClasse_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "designation";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Désignation";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // DgvColCategClasse
+            // 
+            this.DgvColCategClasse.DataPropertyName = "categorie";
+            this.DgvColCategClasse.HeaderText = "Catégorie";
+            this.DgvColCategClasse.Name = "DgvColCategClasse";
+            this.DgvColCategClasse.ReadOnly = true;
+            // 
+            // DgvColNumClasse
+            // 
+            this.DgvColNumClasse.DataPropertyName = "numero";
+            this.DgvColNumClasse.HeaderText = "Numéro";
+            this.DgvColNumClasse.Name = "DgvColNumClasse";
+            this.DgvColNumClasse.ReadOnly = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.groupBox6.Controls.Add(this.TxtNumClasse);
+            this.groupBox6.Controls.Add(this.CmbCategClasse);
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.label6);
+            this.groupBox6.Controls.Add(this.BtnDeleteClasse);
+            this.groupBox6.Controls.Add(this.BtnSaveClasse);
+            this.groupBox6.Controls.Add(this.BtnNewClasse);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.TxtDesignClasse);
+            this.groupBox6.Controls.Add(this.TxtIdClasse);
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Location = new System.Drawing.Point(11, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(348, 181);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            // 
+            // TxtNumClasse
+            // 
+            this.TxtNumClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNumClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.TxtNumClasse.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TxtNumClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumClasse.Location = new System.Drawing.Point(114, 69);
+            this.TxtNumClasse.Mask = "00000";
+            this.TxtNumClasse.Name = "TxtNumClasse";
+            this.TxtNumClasse.Size = new System.Drawing.Size(217, 22);
+            this.TxtNumClasse.TabIndex = 7;
+            this.TxtNumClasse.ValidatingType = typeof(int);
+            // 
+            // CmbCategClasse
+            // 
+            this.CmbCategClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CmbCategClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.CmbCategClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbCategClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.CmbCategClasse.FormattingEnabled = true;
+            this.CmbCategClasse.Location = new System.Drawing.Point(114, 95);
+            this.CmbCategClasse.Name = "CmbCategClasse";
+            this.CmbCategClasse.Size = new System.Drawing.Size(217, 24);
+            this.CmbCategClasse.TabIndex = 10;
+            this.CmbCategClasse.SelectedIndexChanged += new System.EventHandler(this.CmbCategClasse_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(16, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 16);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Catégorie : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 16);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Numéro : ";
+            // 
+            // BtnDeleteClasse
+            // 
+            this.BtnDeleteClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.BtnDeleteClasse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDeleteClasse.Enabled = false;
+            this.BtnDeleteClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteClasse.ForeColor = System.Drawing.Color.White;
+            this.BtnDeleteClasse.Location = new System.Drawing.Point(236, 135);
+            this.BtnDeleteClasse.Name = "BtnDeleteClasse";
+            this.BtnDeleteClasse.Size = new System.Drawing.Size(95, 30);
+            this.BtnDeleteClasse.TabIndex = 6;
+            this.BtnDeleteClasse.Text = "Supprimer";
+            this.BtnDeleteClasse.UseVisualStyleBackColor = false;
+            this.BtnDeleteClasse.Click += new System.EventHandler(this.ControleClasse_Click);
+            // 
+            // BtnSaveClasse
+            // 
+            this.BtnSaveClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(174)))));
+            this.BtnSaveClasse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSaveClasse.Enabled = false;
+            this.BtnSaveClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveClasse.ForeColor = System.Drawing.Color.White;
+            this.BtnSaveClasse.Location = new System.Drawing.Point(128, 135);
+            this.BtnSaveClasse.Name = "BtnSaveClasse";
+            this.BtnSaveClasse.Size = new System.Drawing.Size(95, 30);
+            this.BtnSaveClasse.TabIndex = 5;
+            this.BtnSaveClasse.Text = "Enregistrer";
+            this.BtnSaveClasse.UseVisualStyleBackColor = false;
+            this.BtnSaveClasse.Click += new System.EventHandler(this.ControleClasse_Click);
+            // 
+            // BtnNewClasse
+            // 
+            this.BtnNewClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(181)))), ((int)(((byte)(115)))));
+            this.BtnNewClasse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNewClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNewClasse.ForeColor = System.Drawing.Color.White;
+            this.BtnNewClasse.Location = new System.Drawing.Point(18, 135);
+            this.BtnNewClasse.Name = "BtnNewClasse";
+            this.BtnNewClasse.Size = new System.Drawing.Size(95, 30);
+            this.BtnNewClasse.TabIndex = 4;
+            this.BtnNewClasse.Text = "Nouveau";
+            this.BtnNewClasse.UseVisualStyleBackColor = false;
+            this.BtnNewClasse.Click += new System.EventHandler(this.ControleClasse_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Code : ";
+            // 
+            // TxtDesignClasse
+            // 
+            this.TxtDesignClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtDesignClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.TxtDesignClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDesignClasse.Location = new System.Drawing.Point(114, 43);
+            this.TxtDesignClasse.Name = "TxtDesignClasse";
+            this.TxtDesignClasse.Size = new System.Drawing.Size(217, 22);
+            this.TxtDesignClasse.TabIndex = 3;
+            // 
+            // TxtIdClasse
+            // 
+            this.TxtIdClasse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtIdClasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.TxtIdClasse.Enabled = false;
+            this.TxtIdClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIdClasse.Location = new System.Drawing.Point(114, 17);
+            this.TxtIdClasse.Name = "TxtIdClasse";
+            this.TxtIdClasse.Size = new System.Drawing.Size(217, 22);
+            this.TxtIdClasse.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Désignation : ";
+            // 
             // TabPgComptes
             // 
             this.TabPgComptes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
@@ -586,6 +616,9 @@
             // 
             // TabControlCompte
             // 
+            this.TabControlCompte.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControlCompte.Controls.Add(this.TabPgCompte);
             this.TabControlCompte.Controls.Add(this.TabPgSCompte);
             this.TabControlCompte.Controls.Add(this.TabPgSSCompte);
@@ -608,25 +641,25 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Controls.Add(this.groupBox12);
-            this.groupBox10.Location = new System.Drawing.Point(9, 6);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(3, 3);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(634, 337);
+            this.groupBox10.Size = new System.Drawing.Size(646, 343);
             this.groupBox10.TabIndex = 2;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Compte";
             // 
             // groupBox11
             // 
-            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.DgvCompte);
             this.groupBox11.Location = new System.Drawing.Point(35, 166);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(558, 165);
+            this.groupBox11.Size = new System.Drawing.Size(558, 171);
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Liste de comptes";
@@ -650,7 +683,7 @@
             this.DgvCompte.Name = "DgvCompte";
             this.DgvCompte.ReadOnly = true;
             this.DgvCompte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCompte.Size = new System.Drawing.Size(552, 146);
+            this.DgvCompte.Size = new System.Drawing.Size(552, 152);
             this.DgvCompte.TabIndex = 1;
             this.DgvCompte.Click += new System.EventHandler(this.DgvCompte_Click);
             // 
@@ -684,6 +717,8 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.groupBox12.Controls.Add(this.groupBox7);
             this.groupBox12.Controls.Add(this.TxtNumCompte);
@@ -702,6 +737,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.BtnNewCompte);
             this.groupBox7.Controls.Add(this.BtnSaveCompte);
             this.groupBox7.Controls.Add(this.BtnDeleteCompte);
@@ -757,6 +793,8 @@
             // 
             // TxtNumCompte
             // 
+            this.TxtNumCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNumCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtNumCompte.Cursor = System.Windows.Forms.Cursors.Default;
             this.TxtNumCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -769,6 +807,8 @@
             // 
             // CmbClasseCompte
             // 
+            this.CmbClasseCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbClasseCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbClasseCompte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbClasseCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -811,6 +851,8 @@
             // 
             // TxtDesignCompte
             // 
+            this.TxtDesignCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDesignCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtDesignCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDesignCompte.Location = new System.Drawing.Point(114, 45);
@@ -820,6 +862,8 @@
             // 
             // TxtIdCompte
             // 
+            this.TxtIdCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtIdCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtIdCompte.Enabled = false;
             this.TxtIdCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -851,26 +895,26 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(228)))), ((int)(((byte)(229)))));
             this.groupBox8.Controls.Add(this.groupBox9);
             this.groupBox8.Controls.Add(this.groupBox13);
-            this.groupBox8.Location = new System.Drawing.Point(9, 6);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox8.Location = new System.Drawing.Point(3, 3);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(634, 337);
+            this.groupBox8.Size = new System.Drawing.Size(646, 343);
             this.groupBox8.TabIndex = 3;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Sous compte";
             // 
             // groupBox9
             // 
-            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.DgvSCompte);
             this.groupBox9.Location = new System.Drawing.Point(35, 166);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(558, 165);
+            this.groupBox9.Size = new System.Drawing.Size(558, 171);
             this.groupBox9.TabIndex = 2;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Liste de sous comptes";
@@ -894,7 +938,7 @@
             this.DgvSCompte.Name = "DgvSCompte";
             this.DgvSCompte.ReadOnly = true;
             this.DgvSCompte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvSCompte.Size = new System.Drawing.Size(552, 146);
+            this.DgvSCompte.Size = new System.Drawing.Size(552, 152);
             this.DgvSCompte.TabIndex = 1;
             this.DgvSCompte.Click += new System.EventHandler(this.DgvSCompte_Click);
             // 
@@ -928,6 +972,8 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.groupBox13.Controls.Add(this.groupBox14);
             this.groupBox13.Controls.Add(this.TxtNumSCompte);
@@ -946,6 +992,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox14.Controls.Add(this.BtnNewSCompte);
             this.groupBox14.Controls.Add(this.BtnSaveSCompte);
             this.groupBox14.Controls.Add(this.BtnDeleteSCompte);
@@ -1001,6 +1048,8 @@
             // 
             // TxtNumSCompte
             // 
+            this.TxtNumSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNumSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtNumSCompte.Cursor = System.Windows.Forms.Cursors.Default;
             this.TxtNumSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1013,6 +1062,8 @@
             // 
             // CmbCompte
             // 
+            this.CmbCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbCompte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -1055,6 +1106,8 @@
             // 
             // TxtDesignSCompte
             // 
+            this.TxtDesignSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDesignSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtDesignSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDesignSCompte.Location = new System.Drawing.Point(114, 45);
@@ -1064,6 +1117,8 @@
             // 
             // TxtIdSCompte
             // 
+            this.TxtIdSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtIdSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtIdSCompte.Enabled = false;
             this.TxtIdSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1095,25 +1150,25 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox15.Controls.Add(this.groupBox16);
             this.groupBox15.Controls.Add(this.groupBox17);
-            this.groupBox15.Location = new System.Drawing.Point(9, 6);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox15.Location = new System.Drawing.Point(3, 3);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(634, 337);
+            this.groupBox15.Size = new System.Drawing.Size(646, 343);
             this.groupBox15.TabIndex = 3;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Sous sous compte";
             // 
             // groupBox16
             // 
-            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox16.Controls.Add(this.DgvSSCompte);
             this.groupBox16.Location = new System.Drawing.Point(35, 166);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(558, 165);
+            this.groupBox16.Size = new System.Drawing.Size(558, 171);
             this.groupBox16.TabIndex = 2;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Liste de sous sous compte";
@@ -1137,7 +1192,7 @@
             this.DgvSSCompte.Name = "DgvSSCompte";
             this.DgvSSCompte.ReadOnly = true;
             this.DgvSSCompte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvSSCompte.Size = new System.Drawing.Size(552, 146);
+            this.DgvSSCompte.Size = new System.Drawing.Size(552, 152);
             this.DgvSSCompte.TabIndex = 1;
             this.DgvSSCompte.Click += new System.EventHandler(this.DgvSSCompte_Click);
             // 
@@ -1171,6 +1226,8 @@
             // 
             // groupBox17
             // 
+            this.groupBox17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.groupBox17.Controls.Add(this.groupBox18);
             this.groupBox17.Controls.Add(this.TxtNumSSCompte);
@@ -1189,6 +1246,7 @@
             // 
             // groupBox18
             // 
+            this.groupBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox18.Controls.Add(this.BtnNewSSCompte);
             this.groupBox18.Controls.Add(this.BtnSaveSSCompte);
             this.groupBox18.Controls.Add(this.BtnDeleteSSCompte);
@@ -1244,6 +1302,8 @@
             // 
             // TxtNumSSCompte
             // 
+            this.TxtNumSSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNumSSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtNumSSCompte.Cursor = System.Windows.Forms.Cursors.Default;
             this.TxtNumSSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1256,6 +1316,8 @@
             // 
             // CmbSCompte
             // 
+            this.CmbSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbSCompte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -1298,6 +1360,8 @@
             // 
             // TxtDesignSSCompte
             // 
+            this.TxtDesignSSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDesignSSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtDesignSSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDesignSSCompte.Location = new System.Drawing.Point(114, 45);
@@ -1307,6 +1371,8 @@
             // 
             // TxtIdSSCompte
             // 
+            this.TxtIdSSCompte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtIdSSCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.TxtIdSSCompte.Enabled = false;
             this.TxtIdSSCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1360,16 +1426,18 @@
             this.Load += new System.EventHandler(this.UcComptes_Load);
             this.tabControl.ResumeLayout(false);
             this.TabPgClasse.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClasse)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategClasse)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClasse)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.TabPgComptes.ResumeLayout(false);
             this.TabControlCompte.ResumeLayout(false);
             this.TabPgCompte.ResumeLayout(false);
@@ -1502,5 +1570,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

@@ -33,7 +33,7 @@ GO
 
 CREATE VIEW v_list_numero_compte AS
 SELECT sscpt.id, cpt.numero as compte, scpt.numero as scompte, sscpt.numero as sscompte, sscpt.designation as design,
-	CONVERT(NVARCHAR(10), cpt.numero) + '.' + CONVERT(NVARCHAR(10), scpt.numero + sscpt.numero)  + ' : ' + sscpt.designation as vrai_compte
+	CONVERT(NVARCHAR(10), cpt.numero) + '.' + CONVERT(NVARCHAR(10), scpt.numero) + CONVERT(NVARCHAR(10), sscpt.numero) + ' : ' + sscpt.designation as vrai_compte
 FROM tSSCompte as sscpt
 INNER JOIN tSCompte as scpt ON sscpt.ref_SCompte = scpt.id
 INNER JOIN tCompte as cpt ON scpt.ref_compte = cpt.id  
