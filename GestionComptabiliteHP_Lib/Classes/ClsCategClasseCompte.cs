@@ -32,19 +32,26 @@ namespace GestionComptabiliteHP_Lib.Classes
 
         public void Save(CategClasseCompte categ)
         {
-            if (ImplementConnection.Instance.Conn.State == ConnectionState.Closed)
-                ImplementConnection.Instance.Conn.Open();
-
-            using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())
+            if (categ is null)
             {
-                cmd.CommandText = "sp_insert_update_categClasse";
-                cmd.CommandType = CommandType.StoredProcedure;
+                throw new ArgumentNullException(nameof(categ));
+            } 
+            else
+            {
+                if (ImplementConnection.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementConnection.Instance.Conn.Open();
 
-                cmd.Parameters.Add(Parametres.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
-                cmd.Parameters.Add(Parametres.Instance.AjouterParametre(cmd, "@designation", 100, DbType.String, Designation));
-                
-                cmd.ExecuteNonQuery();
-            }
+                using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "sp_insert_update_categClasse";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametres.Instance.AjouterParametre(cmd, "@id", 4, DbType.Int32, Id));
+                    cmd.Parameters.Add(Parametres.Instance.AjouterParametre(cmd, "@designation", 100, DbType.String, Designation));
+
+                    cmd.ExecuteNonQuery();
+                }
+            }          
         }
     }
 }

@@ -1,13 +1,7 @@
 ﻿using ManageSingleConnection;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UtilitiesLibrary;
 
@@ -25,7 +19,7 @@ namespace GestionComptabiliteHP.Forms
 
         private void FrmReport_Load(object sender, EventArgs e)
         {
-            this.RptViewer.RefreshReport();
+            RptViewer.RefreshReport();
         }
 
         public void LoadReportJournal(DateTime begin, DateTime end)
@@ -71,7 +65,7 @@ namespace GestionComptabiliteHP.Forms
             {
                 if (ImplementConnection.Instance.Conn != null)
                 {
-                    if (ImplementConnection.Instance.Conn.State == System.Data.ConnectionState.Open)
+                    if (ImplementConnection.Instance.Conn.State == ConnectionState.Open)
                         ImplementConnection.Instance.Conn.Close();
                 }
 
@@ -86,7 +80,7 @@ namespace GestionComptabiliteHP.Forms
         {
             try
             {
-                if (ImplementConnection.Instance.Conn.State == System.Data.ConnectionState.Closed)
+                if (ImplementConnection.Instance.Conn.State == ConnectionState.Closed)
                     ImplementConnection.Instance.Conn.Open();
 
                 using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())
@@ -124,7 +118,7 @@ namespace GestionComptabiliteHP.Forms
             {
                 if (ImplementConnection.Instance.Conn != null)
                 {
-                    if (ImplementConnection.Instance.Conn.State == System.Data.ConnectionState.Open)
+                    if (ImplementConnection.Instance.Conn.State == ConnectionState.Open)
                         ImplementConnection.Instance.Conn.Close();
                 }
 

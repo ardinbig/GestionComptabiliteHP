@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionComptabiliteHP_Lib.Interfaces;
 using GestionComptabiliteHP_Lib.Classes;
@@ -139,15 +132,17 @@ namespace GestionComptabiliteHP.Forms
                 {
                     if (IsNotEmpty())
                     {
-                        opt = new Operation();
-                        opt.Id = Convert.ToInt32(TxtIdOperation.Text);
-                        opt.DateOperation = Convert.ToDateTime(DtDateOperation.Text);
-                        opt.Libelle = TxtLibelleOperation.Text.Trim();
-                        opt.Montant = Convert.ToDouble(TxtMontant.Text);
-                        opt.RefCompte1 = _idRefCompte1;
-                        opt.Type1 = CmbType1.Text;
-                        opt.RefCompte2 = _idRefCompte2;
-                        opt.Type2 = CmbType2.Text;
+                        opt = new Operation
+                        {
+                            Id = Convert.ToInt32(TxtIdOperation.Text),
+                            DateOperation = Convert.ToDateTime(DtDateOperation.Text),
+                            Libelle = TxtLibelleOperation.Text.Trim(),
+                            Montant = Convert.ToDouble(TxtMontant.Text),
+                            RefCompte1 = _idRefCompte1,
+                            Type1 = CmbType1.Text,
+                            RefCompte2 = _idRefCompte2,
+                            Type2 = CmbType2.Text
+                        };
 
                         opt.Save(opt);
                         ClearFields();
@@ -157,15 +152,17 @@ namespace GestionComptabiliteHP.Forms
                 {
                     if (IsNotEmpty())
                     {
-                        opt = new Operation();
-                        opt.Id = Convert.ToInt32(TxtIdOperation.Text);
-                        opt.DateOperation = Convert.ToDateTime(DtDateOperation.Text);
-                        opt.Libelle = TxtLibelleOperation.Text.Trim();
-                        opt.Montant = Convert.ToDouble(TxtMontant.Text);
-                        opt.RefCompte1 = _idRefCompte1;
-                        opt.Type1 = CmbType1.Text;
-                        opt.RefCompte2 = _idRefCompte2;
-                        opt.Type2 = CmbType2.Text;
+                        opt = new Operation
+                        {
+                            Id = Convert.ToInt32(TxtIdOperation.Text),
+                            DateOperation = Convert.ToDateTime(DtDateOperation.Text),
+                            Libelle = TxtLibelleOperation.Text.Trim(),
+                            Montant = Convert.ToDouble(TxtMontant.Text),
+                            RefCompte1 = _idRefCompte1,
+                            Type1 = CmbType1.Text,
+                            RefCompte2 = _idRefCompte2,
+                            Type2 = CmbType2.Text
+                        };
 
                         opt.Update(opt);
                         ClearFields();
@@ -175,15 +172,17 @@ namespace GestionComptabiliteHP.Forms
                 {
                     if (!string.IsNullOrEmpty(TxtIdOperation.Text))
                     {
-                        opt = new Operation();
-                        opt.Id = Convert.ToInt32(TxtIdOperation.Text);
-                        opt.DateOperation = Convert.ToDateTime(DtDateOperation.Text);
-                        opt.Libelle = TxtLibelleOperation.Text.Trim();
-                        opt.Montant = Convert.ToDouble(TxtMontant.Text);
-                        opt.RefCompte1 = _idRefCompte1;
-                        opt.Type1 = CmbType1.Text;
-                        opt.RefCompte2 = _idRefCompte2;
-                        opt.Type2 = CmbType2.Text;
+                        opt = new Operation
+                        {
+                            Id = Convert.ToInt32(TxtIdOperation.Text),
+                            DateOperation = Convert.ToDateTime(DtDateOperation.Text),
+                            Libelle = TxtLibelleOperation.Text.Trim(),
+                            Montant = Convert.ToDouble(TxtMontant.Text),
+                            RefCompte1 = _idRefCompte1,
+                            Type1 = CmbType1.Text,
+                            RefCompte2 = _idRefCompte2,
+                            Type2 = CmbType2.Text
+                        };
 
                         opt.Delete(opt.Id);
                         ClearFields();

@@ -1,13 +1,7 @@
 ﻿using GestionComptabiliteHP.Forms;
 using ManageSingleConnection;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestionComptabiliteHP
@@ -131,8 +125,10 @@ namespace GestionComptabiliteHP
 
             this.PnlMain.Controls.Clear();
 
-            frm = new FrmReport();
-            frm.Icon = this.Icon;
+            frm = new FrmReport
+            {
+                Icon = this.Icon
+            };
             frm.ShowDialog();
         }
 
@@ -146,8 +142,10 @@ namespace GestionComptabiliteHP
         {
             if (LblConnection.Text == "Connexion")
             {
-                frm = new FrmLogin();
-                frm.Icon = this.Icon;
+                frm = new FrmLogin
+                {
+                    Icon = this.Icon
+                };
                 frm.ShowDialog();
 
                 ActivateItems();

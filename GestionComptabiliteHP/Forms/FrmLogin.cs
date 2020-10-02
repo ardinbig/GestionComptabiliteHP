@@ -28,12 +28,13 @@ namespace GestionComptabiliteHP.Forms
         {
             try
             {
-                Connection con = new Connection();
-
-                con.Server = TxtServer.Text;
-                con.Database = TxtDb.Text;
-                con.User = TxtUser.Text;
-                con.Password = TxtPwd.Text;
+                Connection con = new Connection
+                {
+                    Server = TxtServer.Text,
+                    Database = TxtDb.Text,
+                    User = TxtUser.Text,
+                    Password = TxtPwd.Text
+                };
 
                 ImplementConnection.Instance.Initialise(con, connectionType);
                 ImplementConnection.Instance.Conn.Open();

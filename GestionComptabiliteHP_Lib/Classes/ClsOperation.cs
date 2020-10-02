@@ -1,22 +1,14 @@
 ﻿using GestionComptabiliteHP_Lib.Interfaces;
 using ManageSingleConnection;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
 using UtilitiesLibrary;
 
 namespace GestionComptabiliteHP_Lib.Classes
 {
     public class Operation : IOperation
     {
-        private int _id;
-        private DateTime _date;
         private string _libelle;
-        private double _montant;
-        private int _ref_compte1;
-        private int _ref_compte2;
         private string _type1;
         private string _type2;
 
@@ -25,44 +17,11 @@ namespace GestionComptabiliteHP_Lib.Classes
 
         }
 
-        public DateTime DateOperation
-        {
-            get
-            {
-                return _date;
-            }
+        public DateTime DateOperation { get; set; }
 
-            set
-            {
-                _date = value;
-            }
-        }
+        public int Id { get; set; }
 
-        public int Id
-        {
-            get
-            {
-                return _id;
-            }
-
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public double Montant
-        {
-            get
-            {
-                return _montant;
-            }
-
-            set
-            {
-                _montant = value;
-            }
-        }
+        public double Montant { get; set; }
 
         public string Libelle
         {
@@ -77,31 +36,9 @@ namespace GestionComptabiliteHP_Lib.Classes
             }
         }
 
-        public int RefCompte1
-        {
-            get
-            {
-                return _ref_compte1;
-            }
+        public int RefCompte1 { get; set; }
 
-            set
-            {
-                _ref_compte1 = value;
-            }
-        }
-
-        public int RefCompte2
-        {
-            get
-            {
-                return _ref_compte2;
-            }
-
-            set
-            {
-                _ref_compte2 = value;
-            }
-        }
+        public int RefCompte2 { get; set; }
 
         public string Type1
         {
@@ -149,7 +86,7 @@ namespace GestionComptabiliteHP_Lib.Classes
         {
             int id = 0;
 
-            if (ImplementConnection.Instance.Conn.State == System.Data.ConnectionState.Closed)
+            if (ImplementConnection.Instance.Conn.State == ConnectionState.Closed)
                 ImplementConnection.Instance.Conn.Open();
 
             using (IDbCommand cmd = ImplementConnection.Instance.Conn.CreateCommand())

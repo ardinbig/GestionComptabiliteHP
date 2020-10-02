@@ -5,21 +5,9 @@ namespace ManageSingleConnection
 {
     public class ImplementConnection : IConnection
     {
-        private IDbConnection _conn = null;
         private static ImplementConnection _instance = null;
 
-        public IDbConnection Conn
-        {
-            get
-            {
-                return _conn;
-            }
-
-            set
-            {
-                _conn = value;
-            }
-        }
+        public IDbConnection Conn { get; set; } = null;
 
         public static ImplementConnection Instance
         {
@@ -36,7 +24,7 @@ namespace ManageSingleConnection
             switch (connectionType)
             {
                 case ConnectionType.SQLServer:
-                    _conn = new SqlConnection(string.Format("Data source={0};Initial catalog={1};User ID={2};Password={3}",
+                    Conn = new SqlConnection(string.Format("Data source={0};Initial catalog={1};User ID={2};Password={3}",
                         connection.Server, connection.Database, connection.User, connection.Password));
                     break;
                 case ConnectionType.MySQL:
@@ -52,7 +40,7 @@ namespace ManageSingleConnection
                 case ConnectionType.Access:
                     return null;
             }
-            return _conn;
+            return Conn;
         }
     }
 }
